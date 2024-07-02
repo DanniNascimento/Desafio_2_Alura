@@ -18,7 +18,31 @@ if (diaDaSemana === "Sábado" || diaDaSemana === "Domingo") {
 }
 
 ```
+Por que usar ===?
+Precisão: Garante que tanto o valor quanto o tipo dos operandos sejam exatamente iguais, evitando comparações inesperadas.
+Prevenção de Erros: Reduz a chance de erros que podem surgir devido a conversões automáticas de tipo.
+Melhor Prática: É considerado uma boa prática para evitar problemas que podem ser difíceis de depurar.
 
+Exemplo prático
+Vamos observar o exemplo de um sistema de login:
+
+```js
+let senhaDoSistema = "senhaTeste!";
+
+let senha = prompt("Digite a senha do sistema:");
+
+if (senha === senhaDoSistema) {
+    alert("Acesso ao sistema garantido");
+} else {
+    alert("Senha incorreta. Acesso negado.");
+}
+
+```
+Aqui, senha e senhaDoSistema são comparados usando === para garantir que tanto o valor quanto o tipo sejam exatamente iguais. Isso evita casos onde, por exemplo, senha poderia ser convertida para um tipo diferente antes da comparação, resultando em uma validação incorreta.
+
+Usar === garante que a comparação seja precisa e comporta-se como esperado, evitando potenciais problemas de lógica no código.
+
+```
 2) Verifique se um número digitado pelo usuário é positivo ou negativo. Mostre um alerta informando.
 
 ```js
